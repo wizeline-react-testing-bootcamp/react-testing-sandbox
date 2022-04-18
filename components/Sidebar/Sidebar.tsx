@@ -9,11 +9,9 @@ const Sidebar = () => {
   return (
     <SidebarWrapper>
       <SidebarMenu />
-
       <SidebarSection title="Top Contributors">
         <Contributors count={5} />
       </SidebarSection>
-
       <SidebarSection title="Activity">
         <Activities />
       </SidebarSection>

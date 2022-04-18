@@ -23,3 +23,10 @@ test("changes button text on click", async () => {
   await fireEvent.click(button);
   expect(mockOnClick).toHaveBeenCalled();
 });
+
+// Now user render and screen to start checking real React components.
+
+// test("renders learn react link", () => {
+//   render(<App />);
+//   screen.debug();
+// });

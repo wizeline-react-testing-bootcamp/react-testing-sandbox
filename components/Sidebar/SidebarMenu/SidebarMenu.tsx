@@ -80,6 +80,7 @@ class SidebarMenu extends React.PureComponent {
         {menuList.length > 0 &&
           menuList.map((item) => (
             <SingleItem
+              id={`sidebarMenu_${item.id}`}
               key={`sidebarMenu_${item.id}`}
               isActive={currentType === item.id}
               item={item}

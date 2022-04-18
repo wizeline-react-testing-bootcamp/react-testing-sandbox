@@ -59,13 +59,13 @@ const Card = ({ item, onOpenModal, onExpand }: CardProps) => {
   };
 
   return (
-    <CardContainer>
+    <CardContainer id={`card-container-${item.id}`}>
       <ContentArea>
         <DetailsRow direction="row">
           <PostInformation post={singleItem} />
           <ActionsBar noMargin>
             {isExpandable && (
-              <ActionItem onClick={() => onExpand(item)}>
+              <ActionItem id="action-item" onClick={() => onExpand(item)}>
                 {!singleItem.isExpanded ? (
                   <MdExpandMore size={24} color="#747474" />
                 ) : (
@@ -74,7 +74,11 @@ const Card = ({ item, onOpenModal, onExpand }: CardProps) => {
               </ActionItem>
             )}
             <ActionItem>
-              <MdFavoriteBorder size={20} color="#747474" />
+              <MdFavoriteBorder
+                role="md-favorite-border"
+                size={20}
+                color="#747474"
+              />
             </ActionItem>
             <ActionItem>
               <MdMoreVert size={20} color="#747474" />
