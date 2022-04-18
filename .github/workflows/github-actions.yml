@@ -1,0 +1,15 @@
+name: "coverage"
+on:
+  pull_request:
+    branches:
+      - bootcamp_submissions
+      - main
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install modules
+        run: yarn
+      - name: Run tests
+        run: yarn jest --coverage
