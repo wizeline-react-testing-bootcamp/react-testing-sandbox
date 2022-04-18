@@ -64,3 +64,17 @@ test('handles server error', async () => {
 })
 
 ```
+
+#### You need to install Jest because React Testing Library only provides methods to help you write the test scripts. So you still need a JavaScript test framework to run the test code.
+
+## React Testing Library Methods for Finding Elements
+
+Most of your React test cases should use methods for finding elements. React Testing Library provides you with several methods to find an element by specific attributes in addition to the getByText() method above:
+
+- getByText(): find the element by its textContent value
+- getByRole(): by its role attribute value
+- getByLabelText(): by its label attribute value
+- getByPlaceholderText(): by its placeholder attribute value
+- getByAltText(): by its alt attribute value
+- getByDisplayValue(): by its value attribute, usually for <input> elements
+- getByTitle(): by its title attribute value
