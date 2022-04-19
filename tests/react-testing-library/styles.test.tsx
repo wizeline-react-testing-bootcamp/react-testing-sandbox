@@ -10,6 +10,7 @@ import { Button } from "../../components/styles";
 // Check that your component rendered without issues
 test("changes button text on click", async () => {
   const { container } = render(<Button />);
+  // console.log(container);
   expect(container.querySelector("button")).toBeInTheDocument();
 });
 
@@ -22,6 +23,7 @@ test("changes button text on click", async () => {
   // we have to wait for the next `tick` so that Svelte flushes all pending state changes.
   await fireEvent.click(button);
   expect(mockOnClick).toHaveBeenCalled();
+  expect(container).toMatchSnapshot();
 });
 
 // Now user render and screen to start checking real React components.

@@ -13,7 +13,7 @@ import store from "../../../store";
 // Try to add
 describe("SidebarMenu React Testing Library Tests", () => {
   test("it renders correctly", async () => {
-    const renderContainer = render(
+    render(
       <Provider store={store}>
         <ThemeProvider theme={theme}>
           <SidebarMenu />
